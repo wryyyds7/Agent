@@ -23,7 +23,7 @@ class VectorStoreService:
         self.spliter = RecursiveCharacterTextSplitter(
             chunk_size=chroma_conf["chunk_size"],
             chunk_overlap=chroma_conf["chunk_overlap"],
-            separator=chroma_conf["separator"],
+            separators=chroma_conf["separators"],
             length_function=len
         )
 
