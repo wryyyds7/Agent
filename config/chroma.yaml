@@ -5,6 +5,7 @@ data_path: data
 md5_hex_store: md5_hex.txt
 allow_knowledge_file_type: [pdf, docx, doc, txt]
 
+k: 3
 
 chunk_size: 200
 chunk_overlap: 20

@@ -1,4 +1,5 @@
 import os,hashlib
+from idlelib.iomenu import encoding
 from importlib.metadata import files
 
 from langchain_community.document_loaders import PyPDFLoader
@@ -53,5 +54,5 @@ def pdf_loader(filepath: str,passwd: str):
 
 # TODO: 这里真的能这么写吗？自产的时候注意一下看看怎么测试
 def txt_loader(filepath: str) -> list[Document]:
-    return TextLoader(filepath).load()
+    return TextLoader(filepath, encoding="utf-8").load()
 
