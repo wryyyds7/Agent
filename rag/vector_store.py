@@ -52,7 +52,7 @@ class VectorStoreService:
                 return False
 
         def save_md5_hex(md5_for_check: str):
-            with open(get_abs_path(chroma_conf["md5_hex_store"]), "r", encoding="utf-8") as f:
+            with open(get_abs_path(chroma_conf["md5_hex_store"]), "a", encoding="utf-8") as f:
                 f.write(md5_for_check + "\n")
 
         def get_file_documents(read_path: str):
@@ -95,3 +95,6 @@ class VectorStoreService:
             except Exception as e:
                 # exc_info为True时，会记录详细的报错堆栈
                 logger_agent.error(f"[加载知识库]文件处理错误: {path}\n{str(e)}", exc_info=True)
+if __name__ == "__main__":
+    vector_store = VectorStoreService()
+    vector_store.load_document()

@@ -12,7 +12,7 @@ os.makedirs(LOG_ROOT, exist_ok=True)
 
 # 日志的格式配置
 DEFAULT_LOG_FORMAT = logging.Formatter(
-    "%(asctime)s - %(name)s - %(levelname)s - %(filename)s:%(lineon)d - %(message)s"
+    "%(asctime)s - %(name)s - %(levelname)s - %(filename)s:%(lineno)d - %(message)s"
 )
 
 def get_logger(

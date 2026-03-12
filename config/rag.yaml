@@ -1,4 +1,4 @@
 chat_model_name: qwen-plus
 embedding_model_name: text-embedding-v4
-api_key: sk-667d6c0a4b134de1ba04a8b86c98a3a3
-dashscope_api_key: sk-667d6c0a4b134de1ba04a8b86c98a3a3
+api_key: sk-
+dashscope_api_key: sk-

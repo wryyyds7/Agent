@@ -34,7 +34,9 @@ class RagSummarizeService(object):
         return self.chain.invoke(
             {
                 "input": query,
-                "context": context
+                "context": context,
+                # TODO: 记得加上历史记录！在rag_service里面改就行！
+                # "history": history
             }
         )
 if __name__ == "__main__":
