@@ -1,10 +1,10 @@
 import os,hashlib
+from idlelib.iomenu import encoding
 from importlib.metadata import files
 
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_core.documents import Document
-from psycopg.types.string import TextLoader
-
+from langchain_community.document_loaders import TextLoader
 from utils.logger_handler import logger_agent
 
 def get_file_md5_hex(filepath: str): # 获取文件md5的十六进制字符串
@@ -47,11 +47,11 @@ def listdir_with_allowed_type(path: str, allowed_type: tuple[str] = None): # 返
 
     return tuple(files)
 
-def pdf_loader(filepath: str,passwd: str):
+def pdf_loader(filepath: str,passwd: str = None):
     return PyPDFLoader(filepath, passwd).load()
 
 
 # TODO: 这里真的能这么写吗？自产的时候注意一下看看怎么测试
 def txt_loader(filepath: str) -> list[Document]:
-    return TextLoader(filepath).load()
+    return TextLoader(filepath, encoding="utf-8").load()
 

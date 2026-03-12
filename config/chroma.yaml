@@ -1,10 +1,11 @@
 collection_name: agent
-embedding_function: DashScopeEmbeddings(dashscope_api_key="sk-667d6c0a4b134de1ba04a8b86c98a3a3")
+embedding_function: DashScopeEmbeddings(dashscope_api_key="sk-")
 persist_directory: chroma_db
 data_path: data
 md5_hex_store: md5_hex.txt
 allow_knowledge_file_type: [pdf, docx, doc, txt]
 
+k: 3
 
 chunk_size: 200
 chunk_overlap: 20
